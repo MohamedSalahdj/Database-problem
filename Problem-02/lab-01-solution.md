@@ -17,6 +17,10 @@ CREATE TABLE Student (
 	phone VARCHAR(255) NOT NULL,
 	track_id int
 )
+-- added 'birth_date' attribut to student table 
+ALTER TABLE Student 
+ADD COLUMN birth_date DATE ;
+
 CREATE TABLE Track(
 	id SERIAL PRIMARY KEY,
 	track_name VARCHAR(255) NOT NULL
