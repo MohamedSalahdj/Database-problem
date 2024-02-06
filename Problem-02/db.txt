@@ -1,0 +1,7 @@
+student (#id, e_name, email, address, phone, *track_id)
+track (#id, track_name)
+subject (#id, sub_name, max_score)
+exam (#id, date)
+grades (#*stu_id, #*sub_id, *exam_id, grade)
+stu_sub (#*stu_id, #*sub_id)
+track_sub (#*track_id, #*sub_id)
