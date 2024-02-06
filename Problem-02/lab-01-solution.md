@@ -43,5 +43,27 @@ CREATE TABLE Exam (
 	id SERIAL PRIMARY KEY,
 	exam_date DATE NOT NULL
 )
+
+CREATE TABLE Grades (
+	student_id INTEGER NOT NULL,
+	subject_id INTEGER NOT NULL,
+	exam_id INTEGER NOT NULL,
+	grade SMALLINT NOT NULL, 
+	
+	CONSTRAINT grade_student_fk 
+	FOREIGN KEY (student_id)
+	REFERENCES Student(id),
+	
+	CONSTRAINT grade_subject_fk
+	FOREIGN KEY (subject_id)
+	REFERENCES Subject(id),
+	
+	CONSTRAINT grade_exam_fk
+	FOREIGN KEY (exam_id)
+	REFERENCES Exam(id),
+	
+	CONSTRAINT "grade_pk" PRIMARY KEY (student_id, subject_id)
+	
+)
 ```
 
