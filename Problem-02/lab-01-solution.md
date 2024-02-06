@@ -21,6 +21,11 @@ CREATE TABLE Student (
 ALTER TABLE Student 
 ADD COLUMN birth_date DATE ;
 
+-- added 'gender' attribut to student table to using it to doing some quries 
+ALTER TABLE Student 
+ADD COLUMN gender VARCHAR(6);
+
+
 CREATE TABLE Track(
 	id SERIAL PRIMARY KEY,
 	track_name VARCHAR(255) NOT NULL
@@ -155,5 +160,52 @@ INSERT INTO Track_Subject(track_id, subject_id)
          (1, 2),
          (4, 3),
          (4, 4);
+```
+
+```postgresql
+-- Display male students who are born before 1991-10-01.
+SELECT * 
+FROM Student
+where gender='male' and birth_date < '1991-10-01';
+
+-- Display students’ names that begin with A.
+SELECT student_name
+FROM Student 
+WHERE student_name like 'A%';
+
+-- Display subjects and their max score sorted by max score
+SELECT  subject_name , max_score 
+FROM Subject
+ORDER BY max_score DESC;
+
+-- Display all students and track name they belong to.
+SELECT s.student_name , t.track_name 
+FROM Student as s inner Join Track  as t
+ON s.track_id = t.id;
+
+-- Display students’ names, their score and subject name
+SELECT 
+	stu.student_name, 
+	sub.subject_name, 
+	g.grade
+	
+FROM 
+	Student as stu 
+inner join 
+	Grades as g ON stu.id = g.student_id
+inner join 
+	Subject as sub ON sub.id = g.subject_id;
+	
+	
+-- Display student names with their subject's names which they will study.
+SELECT 
+	stu.student_name,
+	sub.subject_name	
+FROM 
+	Student as stu 
+inner join 
+	student_subject ON stu.id = student_subject.student_id
+inner join 
+	Subject as sub ON SUB.id = student_subject.subject_id
 ```
 
