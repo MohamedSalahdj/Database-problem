@@ -33,5 +33,15 @@ CREATE TABLE Track(
 	track_name VARCHAR(255) NOT NULL
 )
 
+CREATE TABLE Subject (
+	id SERIAL PRIMARY KEY,
+	subject_name VARCHAR(255) NOT NULL,
+	max_score SMALLINT
+)
+
+CREATE TABLE Exam (
+	id SERIAL PRIMARY KEY,
+	exam_date DATE NOT NULL
+)
 ```
 
