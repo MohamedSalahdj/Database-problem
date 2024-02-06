@@ -100,3 +100,56 @@ CREATE TABLE Track_Subject(
 
 ```
 
+```postgresql
+// Insert into every tables 
+
+INSERT INTO Track(track_name)
+	VALUES 
+		('FULL STACK using Python'),
+		('FULL STACK using PHP'),
+		('Cyber security'),
+		('Embeded System');
+		
+INSERT INTO Student(student_name, email, phone, track_id)
+	VALUES
+			('Mohamed Samy', 'mohamed@gmail.com','12345648',1),
+			('Mohamed Salah', 'mohamedsalah@gmail.com','987455648',3),
+			('Ziad', 'ziad@gmail.com','0111111111',4),
+			('Ali', 'ali@gmail.com','01222222',1);
+			
+INSERT INTO Subject (subject_name, max_score)
+	VALUES 
+		('OOP', 100),
+		('JS', 100),
+		('Stucture Programming', 100),
+		('Data Structure', 100);
+		
+INSERT INTO Exam(exam_date)
+	VALUES 
+		('2023-01-10'),
+		('2023-01-15'),
+		('2023-01-20'),
+		('2023-01-25');
+		
+INSERT INTO Grades(student_id, subject_id, exam_id, grade)
+	VALUES
+		(1, 1, 1, 90),
+		(2, 3, 3, 80),
+		(3, 3, 2, 99),
+		(4, 2, 4, 70);
+        
+INSERT INTO student_subject(student_id, subject_id)
+	VALUES 
+		(1,2),
+		(2,1),
+		(3,4),
+		(4,2);
+		
+INSERT INTO Track_Subject(track_id, subject_id)
+	 VALUES 
+         (1, 1),
+         (1, 2),
+         (4, 3),
+         (4, 4);
+```
+

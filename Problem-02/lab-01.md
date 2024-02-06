@@ -1,7 +1,7 @@
 # 			   Lab 1
 
 - [x] Create your tables in 'db.txt' with their columns in PostgreSQL.
-- [ ] Insert at minimum 3 Rows at each table.
+- [x] Insert at minimum 3 Rows at each table.
 - [ ] Add birth date column for the student table.
 - [ ] Add/Alter foreign key constrains in your tables.
 - [ ] Display male students who are born before 1991-10-01.
