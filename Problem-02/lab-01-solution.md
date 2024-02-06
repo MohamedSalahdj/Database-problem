@@ -17,5 +17,21 @@ CREATE TABLE Student (
 	phone VARCHAR(255) NOT NULL,
 	track_id int
 )
+CREATE TABLE Track(
+	id SERIAL PRIMARY KEY,
+	track_name VARCHAR(255) NOT NULL
+)
+
+-- After create Track table 
+ALTER TABLE Student 
+ADD CONSTRAINT student_track_fk
+FOREIGN KEY (track_id)
+REFERENCES Track(id);
+
+CREATE TABLE Track(
+	id SERIAL PRIMARY KEY,
+	track_name VARCHAR(255) NOT NULL
+)
+
 ```
 
