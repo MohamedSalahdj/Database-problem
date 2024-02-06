@@ -65,5 +65,38 @@ CREATE TABLE Grades (
 	CONSTRAINT "grade_pk" PRIMARY KEY (student_id, subject_id)
 	
 )
+
+CREATE TABLE student_subject (
+	student_id INTEGER NOT NULL,
+	subject_id INTEGER NOT NULL,
+	
+	CONSTRAINT "student_stu_sub_fk"
+	FOREIGN KEY (student_id)
+	REFERENCES Student(id),
+	
+	CONSTRAINT "subject_stu_sub_fk"
+	FOREIGN KEY (subject_id)
+	REFERENCES Subject (id),
+	
+	CONSTRAINT "studnt_subject_pk" PRIMARY KEY (student_id, subject_id)
+
+)
+
+CREATE TABLE Track_Subject(
+	track_id INTEGER,
+	subject_id INTEGER,
+	
+	CONSTRAINT "track_track_subject_fk"
+	FOREIGN KEY (track_id)
+	REFERENCES Track (id),
+	
+	CONSTRAINT "subject_track_subject_fk"
+	FOREIGN KEY (subject_id)
+	REFERENCES Subject (id),
+	
+	CONSTRAINT "track_subject_pk" PRIMARY KEY (track_id, subject_id)
+	
+);
+
 ```
 
