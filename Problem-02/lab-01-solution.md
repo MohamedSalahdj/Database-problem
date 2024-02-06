@@ -14,8 +14,8 @@ CREATE TABLE Student (
 	student_name VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
 	address VARCHAR(255),
-	phone VARCHAR(255) NOTNULL,
-	track_id int,
+	phone VARCHAR(255) NOT NULL,
+	track_id int
 )
 ```
 
