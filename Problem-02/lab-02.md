@@ -12,8 +12,8 @@
 - [x] Add birth date column for the student table.
 - [x] Display name and age of each student.
 - [x] Display the name of students with the year of b_date.
-- [ ] Add new exam, in date column use NOW() function.
-- [ ] Display the number of students’ their name is “Mohammed.
+- [x] Add new exam, in date column use NOW() function.
+- [x] Display the number of students’ their name is “Mohammed.
 - [ ] Display the number of males and females.
 - [ ] Display the repeated first names and their counts if
   higher than 2

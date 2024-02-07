@@ -1,4 +1,4 @@
-# Lab-02 Answers 
+# Lab-02 Answers
 
 ```postgresql
 -- Create a view for tracks names and the subjects which belong to it.
@@ -65,5 +65,17 @@ SELECT
 	student_name,
 	age(now(), birth_date) as age
 FROM Student;
+
+-- Add new exam, in date column use NOW() function.
+INSERT INTO Exam(exam_date)
+	VALUES(now())
+	
+-- Display the number of students’ their name is “Mohammed.
+
+SELECT count(*)
+FROM Student
+WHERE student_name = 'Mohamed'
+
+
 ```
 
