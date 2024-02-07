@@ -76,6 +76,24 @@ SELECT count(*)
 FROM Student
 WHERE student_name = 'Mohamed'
 
+-- Display the number of males and females.
+SELECT 
+	COUNT(*),
+    gender
+FROM 
+	student
+group by 
+	gender;
+
+-- Display the repeated first names and their counts if higher than 2
+
+SELECT 
+	COUNT(student_name) as student_name_count, 		student_name
+FROM 
+	Student
+GROUP BY 
+	student_name
+having 
+	COUNT(student_name) > 2;
 
 ```
-
