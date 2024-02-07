@@ -32,3 +32,38 @@ INNER JOIN
 SELECT * FROM student_subject_view;
 ```
 
+```postgresql
+-- Add gender column for the student table[Enum]. It holds two value (male or female)
+
+CREATE TYPE gender AS ENUM('male', 'female')
+
+ALTER TABLE Student
+ADD COLUMN gender gender;
+
+-- Delete the address and email columns and replace it with contact_info (Address, email) as Composite Data type
+
+ALTER TABLE Student 
+DROP COLUMN email,
+DROP COLUMN address;
+
+CREATE TYPE contact_type AS (
+	address VARCHAR(255),
+	emial VARCHAR(255)
+);
+
+ALTER TABLE Student
+ADD COLUMN contact_info contact_type;
+
+-- Display name and age of each student.
+SELECT 
+	student_name,
+	age(now(), birth_date) as age
+FROM Student;
+
+-- Display the name of students with the year of b_date.
+SELECT 
+	student_name,
+	age(now(), birth_date) as age
+FROM Student;
+```
+
