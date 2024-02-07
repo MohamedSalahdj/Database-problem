@@ -2,8 +2,8 @@
 
 
 
-- [ ] Create a view for tracks names and the subjects which belong to it.
-- [ ] Create a view for student names with their subject's names
+- [x] Create a view for tracks names and the subjects which belong to it.
+- [x] Create a view for student names with their subject's names
   which will study.
 - [ ] Add gender column for the student table[Enum]. It holds two
   value (male or female)
