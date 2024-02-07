@@ -88,7 +88,8 @@ group by
 -- Display the repeated first names and their counts if higher than 2
 
 SELECT 
-	COUNT(student_name) as student_name_count, 		student_name
+	COUNT(student_name) as student_name_count, 		
+	student_name
 FROM 
 	Student
 GROUP BY 
